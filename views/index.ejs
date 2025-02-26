@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mini Messageboard</h1>
+    <a href="/new" class="btn">New Message</a>
+    <% messages.forEach((message, index) => { %>
+        <div>Message: <%= message.text %></div>
+        <div>User: <%= message.user %></div>
+        <div>Date: <%= message.added %></div>
+        <a href="/<%= index%>" class="btn">Open</a>
+    <% }); %>
+</body>
+</html>
